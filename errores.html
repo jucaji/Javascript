@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errores</title>
+</head>
+
+<body>
+    <script>
+        try {
+            console.log("En el Try se agrega el codigo a evaluar");
+            noExiste;
+        } catch (error) {
+            console.log("Cath, captuta cualquier error surgido o lanzado en el try");
+            console.log(error);
+        } finally {
+            console.log("El bloque finally se ejecutara siempre al final de un bloque try-catch");
+        }
+
+        try {
+            let numero = "g";
+            if (isNaN(numero)) {
+                throw new Error("El caaractér introducido no es un Número");
+            }
+            console.log(numero * numero);
+        } catch (error) {
+            console.log(`Se produjo el siguiente error: ${error}`);
+
+        }
+    </script>
+</body>
+
+</html>

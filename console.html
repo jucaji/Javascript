@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console</title>
+</head>
+
+<body>
+    <script>
+        //console
+
+        console.log(console);
+        console.error("Esto es ub error");
+        console.warn("esto es una alerta");
+        console.dir(document);
+        console.dir(window);
+        console.clear();
+        console.group("Javascript");
+        console.log("Este es el curso de javascript");
+        console.log("Aprendiendo javascript");
+        console.log("clases javascript");
+        console.log("impartido por jhon mircha javascript");
+        console.groupEnd();
+
+        console.clear();
+        console.log(console);
+        console.table(Object.entries(console).sort());
+
+        const numeros = [1, 2, 3, 4, 5];
+        const vocal = ["a", "e", "e", "i", "o", "u"];
+
+        console.table(numeros);
+        console.table(vocal);
+
+        const perro = {
+            nombre: "bony",
+            raza: "pitbull",
+            color: "blanco"
+        }
+        console.table(perro);
+
+        console.clear();
+
+        console.time('cuanto tarda mi aplicacion');
+
+        const arreglo = Array(1000000);
+
+        for (let i = 0; i < arreglo.length; i++) {
+            arreglo[i] = i;
+        }
+        console.timeEnd('cuanto tarda mi aplicacion');
+    </script>
+
+</body>
+
+</html>

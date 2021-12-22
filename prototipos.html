@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipos</title>
+</head>
+
+<body>
+    <script>
+        //POO
+        /* 
+        Clases - modelos a seguir
+        Objetos - Es una instancia de una clase
+            Atributos - Es una caracteristica o propiedad del objeto
+                (son variables dentro de un objeto)
+            Metodos - Son las acciones que un objeto puede realizar
+                (Son funciones dentro de un objeto)
+        */
+
+        /*         const animal = {
+                    nombre: "Snoopy",
+                    sonar() {
+                        console.log("Hago sonidos por que estoy vivo");
+                    }
+                }
+                const animal2 = {
+                    nombre: "Lola Bunny",
+                    sonar() {
+                        console.log("Hago sonidos por que estoy vivo");
+                    }
+                }
+                console.log(animal);
+                console.log(animal2);
+         */
+
+        //Funcion Constructora
+
+        /* function Animal(nombre, genero) {
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+
+            //Metodos
+
+            this.sonar = function() {
+                console.log("Hago sonidos por que estoy vivo");
+            }
+        } */
+
+        //Metodos agregados al prototipo de la funcion contructora
+
+        function Animal(nombre, genero) {
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+        }
+
+        Animal.prototype.sonar = function() {
+            console.log("Hago sonidos por que estoy vivo");
+        }
+
+        Animal.prototype.saludar = function() {
+            console.log(`Hola mi nombre es ${this.nombre}`);
+        }
+
+        const snoopy = new Animal("Snoopy", "Macho"),
+            lolaBunny = new Animal("Lola Bunny", "Hembra");
+
+        console.log(snoopy);
+        console.log(lolaBunny);
+
+        snoopy.sonar();
+        snoopy.saludar();
+        lolaBunny.sonar();
+        lolaBunny.saludar();
+    </script>
+
+</body>
+
+</html>

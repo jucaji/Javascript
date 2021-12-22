@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia</title>
+</head>
+
+<body>
+    <script>
+        //Herencia Prototipica
+
+        function Animal(nombre, genero) {
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+        }
+
+        Animal.prototype.sonar = function() {
+            console.log("Hago sonidos por que estoy vivo");
+        }
+
+        Animal.prototype.saludar = function() {
+            console.log(`Hola mi nombre es ${this.nombre}`);
+        }
+
+        function Perro(nombre, genero, tamanio) {
+            this.super = Animal;
+            this.super(nombre, genero);
+            this.tamanio = tamanio;
+        }
+        //Perro esta heredando de animal
+
+        Perro.prototype = new Animal();
+        Perro.prototype.constructor = Perro;
+
+        //Sobreescritura metodos del prototipo padre en el hijo
+
+        Perro.prototype.sonar = function() {
+            console.log("Soy un perro y mi sonidos es un ladrido");
+        }
+        Perro.prototype.ladrar = function() {
+            console.log("Guauuu guauuu!!!!!");
+        }
+
+        const snoopy = new Perro("Snoopy", "Macho", "Mediano");
+        console.log(snoopy);
+        snoopy.sonar();
+        snoopy.saludar();
+        snoopy.ladrar();
+    </script>
+
+</body>
+
+</html>

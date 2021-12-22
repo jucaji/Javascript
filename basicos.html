@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <!-- <script>
+        var hola = "hola mundo";
+        console.log(hola);
+
+        let objeto = {
+            nombre: "Julian",
+            edad: 34,
+        }
+
+        let colores = ["blanco", "negro", "azul"];
+        console.log(objeto);
+        console.log(colores);
+
+        objeto.correo = "jucaji@gmail.com";
+        colores.push("rojo");
+
+        console.log(objeto);
+        console.log(colores);
+
+        let nombre = 'juca';
+        let apellido = 'rox';
+        let saludo = new String('hi world');
+        let lorem = "lorem ipsum train for ever"
+
+        console.log(nombre, apellido, saludo);
+        console.log(
+            nombre.length,
+            apellido.length,
+            saludo.length,
+            nombre.toUpperCase(),
+            apellido.toLowerCase(),
+            lorem.includes("train"),
+            lorem.includes("car"),
+            lorem.trim(),
+            lorem.split(" ")
+        )
+    </script>
+ -->
+    <script>
+        /*  let nombre = "Julian"; */
+        /* let apellido = "Jimenez";
+
+        //COncatenacion
+        let saludo = " Hola mi nombre es " + nombre + " " + apellido;
+        console.log(saludo)
+
+        let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`;
+        console.log(saludo2);
+
+        let ul = "<ul><li>primavera</li><li>verano</li><li>otoño</li><li>invierno</li></ul>";
+        console.log(ul);
+
+        let ul2 = `
+            <ul>
+                <li>Primavera</li>
+                <li>Primavera</li> 
+                <li>Primavera</li> 
+                <li>Primavera</li></ul>` */
+
+        /*  let indefinida;
+         console.log(indefinida)
+
+         let nulo = null;
+         console.log(null)
+
+         //Función Declarada
+
+         function estEsUnaFuncion() {
+             console.log("Uno")
+             console.log("Dos")
+             console.log("Tres")
+
+         } */
+
+        function unaFuncionQueDevuelveValor() {
+            console.log("Uno");
+            return 19;
+            console.log("Dos");
+            console.log("Tres");
+            return "La funcion ha retornado una cadena de texto"
+        }
+        //unaFuncionQueDevuelveValor();
+        //Invocación de funciones
+        //estEsUnaFuncion();
+        let valorDeFuncion = unaFuncionQueDevuelveValor();
+        console.log(valorDeFuncion);
+
+        function saludar(nombre, edad) {
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+        }
+
+        saludar("Kenai", 7);
+        saludar();
+
+        //funciones: es un bloque de codigo autocontenido
+        // funcion declarada
+        funcionDeclarada();
+
+        function funcionDeclarada() {
+            console.log("Esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo incluso antes de que la funcion sea declarada")
+        }
+        funcionDeclarada();
+
+        const funcionExpresada = function() {
+            console.log("Esto es una funcion expresada es decir, una funcion que se le ha asignado como valor a una variable, si invocamos esta funcion antes de su definicion JS nos dira...")
+        }
+        funcionExpresada();
+    </script>
+
+
+
+
+</body>
+
+</html>

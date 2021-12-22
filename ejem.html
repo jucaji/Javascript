@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo POO</title>
+</head>
+
+<body>
+    <script>
+        class Auto {
+            constructor(marca, carroceria, tamanio) {
+                this.marca = marca;
+                this.carroceria = carroceria;
+                this.tamanio = tamanio;
+
+            };
+            velocidad() {
+                console.log(`El carro ${this.marca} tiene una ${this.maxVel}`);
+            };
+            puestos() {
+                console.log(`El carro ${this.marca} es de ${this.puesto}`);
+            }
+            combustible() {
+                console.log(`El caro es ${this.comb}`);
+            }
+        }
+        class Camioneta extends Auto {
+            constructor(marca, carroceria, tamanio, maxVel, comb, puesto) {
+                super(marca, carroceria, tamanio);
+                this.maxVel = maxVel;
+                this.comb = comb;
+                this.puesto = puesto;
+            }
+        }
+
+        const toyota = new Auto(" Toyota", " 4x4", " Grande", " 200km", " Gasolina", " 7 puestos");
+        console.log(toyota);
+        toyota.velocidad();
+        toyota.puestos();
+        toyota.combustible();
+    </script>
+
+</body>
+
+</html>

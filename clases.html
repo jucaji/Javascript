@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+</head>
+
+<body>
+    <script>
+        //Clases
+
+        class Animal {
+            // El constructor es unmetodo especial que se ejecuta en el momento de instanciar la clase
+            constructor(nombre, genero) {
+                this.nombre = nombre;
+                this.genero = genero;
+            }
+
+            //Metodos si reciben parametros directos en caso de que se requieran
+            sonar() {
+                console.log("Hago sonidos por que estoy vivo")
+            }
+            saludar() {
+                console.log(`Hola me llamo ${this.nombre}`);
+            }
+        }
+        class Pato extends Animal {
+            //Con el metodo super() se manda llamar el constructor de la clase padre
+            constructor(nombre, genero, tamanio) {
+                super(nombre, genero);
+                this.tamanio = tamanio;
+            }
+
+            sonar() {
+                console.log("Soy un pato y mi sonido es raro")
+            }
+            ladrar() {
+                console.log("yo hago cuakk cuakkk !!!!!")
+            }
+        }
+
+        const donald = new Pato("Donald", "Macho", "Mediano"),
+            mimi = new Animal("Mimi", "Hembra");
+
+        console.log(mimi);
+        console.log(donald);
+        donald.saludar();
+        donald.sonar();
+        donald.ladrar();
+    </script>
+
+</body>
+
+</html>

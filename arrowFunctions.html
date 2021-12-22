@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <script>
+        //Funciones Flecha
+        //FUnciones anonimas expresadas
+
+        const saludar = function() {
+            console.log(`Hola`);
+        }
+        saludar();
+        const saludo = nombre => console.log(`Holaaa ${nombre}`);
+        saludo("Irma");
+
+        /* const sumar = function(a, b) {
+            return a + b;
+        } */
+
+        const sumar = (a, b) => a + b;
+        console.log(sumar(7, 8));
+
+        const funcionDeVariasLineas = () => {
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+        funcionDeVariasLineas();
+
+        const numeros = [1, 2, 3, 4, 5];
+
+        numeros.forEach((lo, index) =>
+            console.log(`${lo} esta en la posicion ${index}`));
+
+        //This de un metodo
+
+        const perro = {
+            nombre: "Bruno",
+            ladrar: () => {
+                console.log(this)
+            }
+        }
+        perro.ladrar();
+    </script>
+</body>
+
+</html>

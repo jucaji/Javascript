@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Es lo mas importante en javascript
+        /*dentro de un objeto, a las variables se le van a llamar atributos/propiedades y a las funciones se le llaman metodos*/
+        const b = {
+
+        }
+        console.log(b);
+
+        const c = new Object();
+        console.log(c);
+
+        const jul = {
+            nombre: "Julian",
+            apellido: "Jimenez",
+            edad: 34,
+            pasatiempos: ["Correr", "Hacer Ejercicio", "estudiar"],
+            soltero: false,
+            contacto: {
+                email: "jcj@gmail.com",
+                movil: "321444444",
+            },
+            saludar: function() {
+                console.log(`Hola:)`)
+            },
+            decirMiNombre: function() {
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes escribir al correo ${jul.contacto.email}`)
+            }
+        }
+        console.log(jul);
+        console.log(jul["nombre"]);
+        console.log(jul["apellido"]);
+        console.log(jul.nombre);
+        console.log(jul.edad);
+        console.log(jul.pasatiempos[0]);
+        console.log(jul.contacto);
+        console.log(jul.contacto.movil);
+        jul.saludar();
+        jul.decirMiNombre();
+
+        console.log(Object.keys(jul));
+        console.log(Object.values(jul));
+        console.log(jul.hasOwnProperty("nombre"));
+    </script>
+</body>
+
+</html>
