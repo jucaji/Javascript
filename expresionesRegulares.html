@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones Regulares</title>
+</head>
+
+<body>
+
+    <script>
+        // Secuencia de caracteres que forma un patron de busqueda de cadenas de caracteres u operaciones de sustituciones
+        /*  */
+        let cadena = "lorem ipsum dolor sait amet concectur adipsciting doloremque dolore"
+        let expReg = new RegExp("lorem", "ig");
+        let expReg2 = /lorem/ig;
+
+        console.log(expReg.test(cadena));
+        console.log(expReg.exec(cadena));
+        console.log(expReg2.test(cadena));
+        console.log(expReg2.exec(cadena));
+    </script>
+
+</body>
+
+</html>
